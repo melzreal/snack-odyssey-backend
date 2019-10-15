@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :snacks
 	namespace :api do
  		resources :users
 		resources :countries

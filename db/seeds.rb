@@ -15,7 +15,11 @@ c1 = Country.create(country: "Japan")
 c2 = Country.create(country: "Greece")
 c3 = Country.create(country: "Portugal")
 
-Place.create(name: "Tokyo", country_id: c1.id)
-Place.create(name: "Athens", country_id: c2.id)
-Place.create(name: "Lisbon", country_id: c3.id)
+p1 = Place.create(name: "Tokyo", country_id: c1.id)
+p2 = Place.create(name: "Osaka", country_id: c1.id)
 
+p3 = Place.create(name: "Athens", country_id: c2.id)
+p4 = Place.create(name: "Lisbon", country_id: c3.id)
+
+Snack.create(snack: "Okonomiyaki", place_id: p2.id)
+Snack.create(snack: "Custard Tarts", place_id: p4.id)
