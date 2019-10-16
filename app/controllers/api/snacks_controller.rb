@@ -1,4 +1,4 @@
-class SnacksController < ApplicationController
+class Api::SnacksController < ApplicationController
   before_action :set_snack, only: [:show, :update, :destroy]
 
   # GET /snacks

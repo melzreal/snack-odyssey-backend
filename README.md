@@ -6,8 +6,10 @@
 
 * Seed the db and party away
 
-A country has many places, a user has many countries and places through countries
+A country has has many countries
+A country many places
+A place many snacks
 
-Or a user has many travels, and many countries through travels and many places through countries
 
+..endless snacking opportunities, say what
 
