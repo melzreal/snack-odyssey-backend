@@ -23,3 +23,8 @@ p4 = Place.create(name: "Lisbon", country_id: c3.id)
 
 Snack.create(snack: "Okonomiyaki", place_id: p2.id)
 Snack.create(snack: "Custard Tarts", place_id: p4.id)
+
+
+Blog.create(name: "Bojack's adventures", user_id: bobo.id)
+Blog.create(name: "Ju Goes around", user_id: juju.id)
+Blog.create(name: "Popo the Boss", user_id: bobo.id)
