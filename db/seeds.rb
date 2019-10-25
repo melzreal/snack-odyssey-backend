@@ -28,3 +28,13 @@ Snack.create(snack: "Custard Tarts", place_id: p4.id)
 Blog.create(name: "Bojack's adventures", user_id: bobo.id)
 Blog.create(name: "Ju Goes around", user_id: juju.id)
 Blog.create(name: "Popo the Boss", user_id: bobo.id)
+
+
+Post.create(blog_id: 1, title: "Bo goes Tokyo" , body: "There were pork buns everywhere and Akihabara was a blast!")
+Post.create(blog_id: 1, title: "Bo in Frankfurt" , body: "It was just a stopover didnt even get a shcnitzel!")
+Post.create(blog_id: 1, title: "Bo in Nuremberg" , body: "Such a cool medieval city, with some good bakeries")
+Post.create(blog_id: 1, title: "Bo goes Rome" , body: "Had the best gnocchi of my life there, with courgette flowers and ham! YOM")
+Post.create(blog_id: 1, title: "Bo goes Venice" , body: "The biggest Tiramisu I've ever seen! And of course Venice is beautiful too, very good fish restaurants!")
+Post.create(blog_id: 1, title: "Bo in Ho Chin Minh" , body: "Delicious coconut prawn pancakes! Definitely do the motorbike food tour.")
+
+
