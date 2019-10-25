@@ -21,13 +21,10 @@ p2 = Place.create(name: "Osaka", country_id: c1.id)
 p3 = Place.create(name: "Athens", country_id: c2.id)
 p4 = Place.create(name: "Lisbon", country_id: c3.id)
 
-Snack.create(snack: "Okonomiyaki", place_id: p2.id)
-Snack.create(snack: "Custard Tarts", place_id: p4.id)
-
 
 Blog.create(name: "Bojack's adventures", user_id: bobo.id)
 Blog.create(name: "Ju Goes around", user_id: juju.id)
-Blog.create(name: "Popo the Boss", user_id: bobo.id)
+Blog.create(name: "Popo the Boss", user_id: popo.id)
 
 
 Post.create(blog_id: 1, title: "Bo goes Tokyo" , body: "There were pork buns everywhere and Akihabara was a blast!")

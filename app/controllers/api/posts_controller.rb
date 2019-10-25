@@ -3,9 +3,12 @@ class Api::PostsController < ApplicationController
 
   # GET /posts
   def index
+ 
     @posts = Post.all
+    @authors = @posts.map{ |post| post.blog.user.name }
+    posts_json = PostsSerializer.new(@posts).serialized_json
+    render json: posts_json
 
-    render json: @posts
   end
 
   # GET /posts/1

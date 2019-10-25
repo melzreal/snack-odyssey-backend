@@ -40,20 +40,6 @@ ActiveRecord::Schema.define(version: 2019_10_23_202758) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "snacks", force: :cascade do |t|
-    t.string "snack"
-    t.string "place_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "travels", force: :cascade do |t|
-    t.string "country_id"
-    t.string "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
