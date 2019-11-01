@@ -5,7 +5,6 @@ class Api::PostsController < ApplicationController
   def index
  
     @posts = Post.all
-    @authors = @posts.map{ |post| post.blog.user.name }
     posts_json = PostsSerializer.new(@posts).serialized_json
     render json: posts_json
 
@@ -18,10 +17,11 @@ class Api::PostsController < ApplicationController
 
   # POST /posts
   def create
-    @post = Post.new(post_params)
+
+    @post = Post.new(blog_id: params[:post][:blog_id], title: params[:post][:title], body: params[:post][:body])
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created 
     else
       render json: @post.errors, status: :unprocessable_entity
     end

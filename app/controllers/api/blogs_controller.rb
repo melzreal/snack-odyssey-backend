@@ -4,7 +4,6 @@ class Api::BlogsController < ApplicationController
   # GET /blogs
   def index
     
-
     @blogs = Blog.all
 
     render json: @blogs
@@ -13,6 +12,7 @@ class Api::BlogsController < ApplicationController
   # GET /blogs/1
   def show
     render json: @blog
+
   end
 
   # POST /blogs

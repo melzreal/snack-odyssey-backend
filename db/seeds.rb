@@ -34,4 +34,6 @@ Post.create(blog_id: 1, title: "Bo goes Rome" , body: "Had the best gnocchi of m
 Post.create(blog_id: 1, title: "Bo goes Venice" , body: "The biggest Tiramisu I've ever seen! And of course Venice is beautiful too, very good fish restaurants!")
 Post.create(blog_id: 1, title: "Bo in Ho Chin Minh" , body: "Delicious coconut prawn pancakes! Definitely do the motorbike food tour.")
 
+Post.create(blog_id: 2, title: "Ju loves Madid" , body: "Had some great paella! ")
 
+Post.create(blog_id: 3, title: "Popo in Barcelona" , body: "Lovely fruit juices in Las Ramblas.")

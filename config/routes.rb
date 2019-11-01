@@ -8,15 +8,18 @@ Rails.application.routes.draw do
 
 
 	namespace :api do
-		resources :blogs
+		
+      resources :blogs do 
+        resources :posts 
+      end 
+      
  		resources :users
 		resources :countries
     resources :places
+
   	
   	
-  		resources :blogs do 
-  			resources :posts 
-  		end 
+  	
 
  	end 
  	
