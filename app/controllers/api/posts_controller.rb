@@ -21,7 +21,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(blog_id: params[:post][:blog_id], title: params[:post][:title], body: params[:post][:body])
 
     if @post.save
-      render json: @post, status: :created 
+      render json: PostsSerializer.new(@post).serialized_json, status: :created 
     else
       render json: @post.errors, status: :unprocessable_entity
     end
