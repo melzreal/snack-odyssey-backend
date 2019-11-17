@@ -6,7 +6,9 @@ class Api::BlogsController < ApplicationController
     
     @blogs = Blog.all
 
-    render json: @blogs
+    blogs_json = BlogsSerializer.new(@blogs).serialized_json
+    render json: blogs_json
+
   end
 
   # GET /blogs/1
@@ -20,7 +22,7 @@ class Api::BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     if @blog.save
-      render json: @blog, status: :created, location: @blog
+      render json: BlogsSerializer.new(@blog).serialized_json, status: :created 
     else
       render json: @blog.errors, status: :unprocessable_entity
     end

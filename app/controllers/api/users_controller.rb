@@ -9,6 +9,20 @@ class Api::UsersController < ApplicationController
     
   end
 
+
+  # def posts_index
+  #   @user = User.find(params[:id])
+  #   @posts = @user.posts
+  #   render json: @posts
+  # end
+ 
+  # def post
+  #   @user = User.find(params[:id])
+ 
+  #   @post = Post.find(params[:post_id])
+  #   render json: @post
+  # end
+
   # GET /users/1
   def show
     user_json = UserSerializer.new(@user).serialized_json
@@ -20,7 +34,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+        render json: UserSerializer.new(@user).serialized_json, status: :created 
     else
       render json: @user.errors, status: :unprocessable_entity
     end

@@ -1,10 +1,10 @@
 class UserSerializer
   include FastJsonapi::ObjectSerializer
   attributes :name, :email
-
+  has_one :blog
   has_many :posts, through: :blog
 
-  attribute :posts do |user| {
+  attribute :blog do |user| {
    posts: user.posts.all
   }
  end

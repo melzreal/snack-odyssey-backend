@@ -1,5 +1,6 @@
-class BlogsserializerSerializer
+class BlogsSerializer
   include FastJsonapi::ObjectSerializer
   attributes :name
-  has_many :posts
+  has_many :posts, serializer: PostsSerializer
+  belongs_to :user, serializer: UserSerializer
 end
